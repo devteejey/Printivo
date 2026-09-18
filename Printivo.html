@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Printly — Quality Prints Delivered</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="Printivo.css">
+</head>
+
+<body>
+
+
+<header class="header">
+
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <div class="phone">
+                <i class="fa-solid fa-phone"></i>
+                +234 706 900 0083
+            </div>
+            <div class="country">
+                <span>🇳🇬</span>
+                Nigeria
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+
+        <div class="container nav-inner">
+            <a href="#" class="logo">
+                Print<span>ly</span>
+            </a>
+            <div class="nav-links">
+                <a href="#products">All Products</a>
+                <a href="#reseller">
+                    Become a Reseller
+                </a>
+                <a href="#merch">
+                    Merch Store
+                </a>
+                <a href="#marketplace">
+                    Marketplace
+                </a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="login-btn" onclick="openModal('loginModal')">
+                    Sign In
+                </button>
+                <button
+                    class="signup-btn"
+                    onclick="openModal('signupModal')">
+                    Create Account
+                </button>
+            </div>
+
+            <button class="menu-btn" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="#products">All Products</a>
+        <a href="#categories">Categories</a>
+        <a href="#reseller">Become a Reseller</a>
+        <a href="#merch">Merch Store</a>
+        <a href="#marketplace">Marketplace</a>
+
+        <button onclick="openModal('loginModal')">
+            Sign In
+        </button>
+
+        <button onclick="openModal('signupModal')">
+            Create Account
+        </button>
+
+    </div>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="container hero-content">
+        <div class="hero-text">
+            <div class="hero-label">
+                🇳🇬 Proudly serving Nigeria
+            </div>
+            <h1>
+                Quality Prints
+                <br>
+                <span>Shipped to your doorstep.</span>
+            </h1>
+            <p>
+                From business cards to branded merchandise,
+                create professional prints for your business,
+                events and personal projects.
+            </p>
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search for Business cards, T-shirts, Mugs, etc">
+                <button onclick="searchProducts()">
+                    Search
+                </button>
+            </div>
+
+            <div class="popular-searches">
+                <span>Popular:</span>
+                <button onclick="quickSearch('Business Cards')">
+                    Business Cards
+                </button>
+                <button onclick="quickSearch('T-Shirts')">
+                    T-Shirts
+                </button>
+                <button onclick="quickSearch('Mugs')">
+                    Mugs
+                </button>
+                <button onclick="quickSearch('Flyers')">
+                    Flyers
+                </button>
+            </div>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <div class="floating-card card-one">
+                <i class="fa-solid fa-id-card"></i>
+                Business Cards
+            </div>
+
+            <div class="floating-card card-two">
+                <i class="fa-solid fa-shirt"></i>
+                T-Shirts
+            </div>
+
+            <div class="floating-card card-three">
+                <i class="fa-solid fa-mug-hot"></i>
+                Mugs
+            </div>
+
+            <div class="printer-illustration">
+
+                <div class="paper paper-one"></div>
+                <div class="paper paper-two"></div>
+                <div class="paper paper-three"></div>
+
+                <div class="printer">
+                    <div class="printer-top"></div>
+                    <div class="printer-screen">
+                        <i class="fa-solid fa-print"></i>
+                    </div>
+                    <div class="printer-body"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section" id="products">
+
+    <div class="container">
+        <div class="section-header">
+            <div>
+                <p class="section-tag">SHOP OUR PRINTS</p>
+                <h2>Popular Products</h2>
+            </div>
+            <a href="#" class="view-all">
+                See All Products
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+
+        <div class="product-grid" id="productGrid">
+
+            <article class="product-card"data-name="Two-Sided Business Cards">
+                <div class="product-image blue">
+                    <div class="business-card">
+                        <strong>YOUR BRAND</strong>
+                        <small>Creative Solutions</small>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <h3>Two-Sided Business Cards</h3>
+                    <p>Starting at</p>
+                    <strong>₦15,100 <small>per 100</small></strong>
+                    <button onclick="orderProduct('Two-Sided Business Cards')">
+                        Browse Product
+                    </button>
+                </div>
+
+            </article>
+
+
+            <article class="product-card"data-name="Round Stickers">
+                <div class="product-image yellow">
+                    <div class="sticker">
+                        YOUR<br>
+                        BRAND
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <h3>Round Stickers</h3>
+                    <p>Starting at</p>
+                    <strong>₦17,000 <small>per 100</small></strong>
+                    <button onclick="orderProduct('Round Stickers')">
+                        Browse Product
+                    </button>
+                </div>
+
+            </article>
+
+
+            <article class="product-card"data-name="Simple Mugs">
+
+                <div class="product-image pink">
+                    <div class="mug">
+                        <span>PRINTLY</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Simple Mugs</h3>
+                    <p>Starting at</p>
+                    <strong>₦47,400 <small>per 10</small></strong>
+                    <button onclick="orderProduct('Simple Mugs')">
+                        Browse Product
+                    </button>
+                </div>
+
+            </article>
+
+
+            <article class="product-card"data-name="Postcards">
+                <div class="product-image purple">
+                    <div class="postcard">
+                        HELLO <br> THERE!
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Postcards</h3>
+                    <p>Starting at</p>
+                    <strong>₦22,300 <small>per 50</small></strong>
+                    <button onclick="orderProduct('Postcards')">
+                        Browse Product
+                    </button>
+                </div>
+
+            </article>
+
+
+            <article class="product-card"data-name="Roll Up Banners">
+
+                <div class="product-image orange">
+                    <div class="roll-banner">
+                        <strong>YOUR</strong>
+                        <span>BRAND</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <h3>Roll Up Banners</h3>
+                    <p>Starting at</p>
+                    <strong>₦68,500 <small>per 1</small></strong>
+                    <button onclick="orderProduct('Roll Up Banners')">
+                        Browse Product
+                    </button>
+                </div>
+
+            </article>
+
+
+            <article class="product-card"data-name="A2 Posters">
+
+                <div class="product-image green">
+                    <div class="poster">
+                        BIG <br> IDEAS
+                    </div>
+
+                </div>
+
+                <div class="product-info">
+                    <h3>A2 Posters</h3>
+                    <p>Starting at</p>
+                    <strong>₦5,000 <small>per 1</small></strong>
+                    <button onclick="orderProduct('A2 Posters')">
+                        Browse Product
+                    </button>
+                </div>
+
+            </article>
+
+
+            <article class="product-card"data-name="Trifold Brochures">
+
+                <div class="product-image teal">
+                    <div class="brochure">
+                        <span>CREATE</span>
+                        <strong>MORE</strong>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <h3>Trifold Brochures</h3>
+                    <p>Starting at</p>
+                    <strong>₦47,500 <small>per 100</small></strong>
+                    <button onclick="orderProduct('Trifold Brochures')">
+                        Browse Product
+                    </button>
+                </div>
+
+            </article>
+
+
+            <article class="product-card"data-name="ID Cards">
+
+                <div class="product-image dark">
+                    <div class="id-card">
+                        <div class="avatar"></div>
+                        <strong>IDENTITY</strong>
+                        <small>MEMBER CARD</small>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <h3>Landscape ID Cards</h3>
+                    <p>Starting at</p>
+                    <strong>₦4,500 <small>per 1</small></strong>
+                    <button onclick="orderProduct('ID Cards')">
+                        Browse Product
+                    </button>
+                </div>
+
+            </article>
+
+
+            <article class="product-card"data-name="T-Shirts">
+
+                <div class="product-image white">
+                    <div class="tshirt">
+                        <span>PRINTLY</span>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <h3>Branded T-Shirts</h3>
+                    <p>Starting at</p>
+                    <strong>₦7,000 <small>per 1</small></strong>
+                    <button onclick="orderProduct('T-Shirts')">
+                        Browse Product
+                    </button>
+                </div>
+
+            </article>
+
+
+            <article class="product-card"data-name="Paper Bags">
+
+                <div class="product-image beige">
+                    <div class="paper-bag">
+                        YOUR <br> BRAND
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <h3>Branded Paper Bags</h3>
+                    <p>Starting at</p>
+                    <strong>₦140,000 <small>per 100</small></strong>
+                    <button onclick="orderProduct('Paper Bags')">
+                        Browse Product
+                    </button>
+                </div>
+
+            </article>
+
+
+            <article class="product-card"data-name="Courier Bags">
+
+                <div class="product-image light">
+                    <div class="courier">
+                        <strong>DELIVERED</strong>
+                        <small>WITH CARE</small>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <h3>A4 Courier Bags</h3>
+                    <p>Starting at</p>
+                    <strong>₦27,500 <small>per 100</small></strong>
+                    <button onclick="orderProduct('Courier Bags')">
+                        Browse Product
+                    </button>
+                </div>
+
+            </article>
+
+        </div>
+
+        <div id="noResults" class="no-results">
+            No products found.
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section categories-section" id="categories">
+
+    <div class="container">
+        <div class="section-header">
+            <div>
+                <p class="section-tag">EXPLORE</p>
+                <h2>Popular Categories</h2>
+            </div>
+            <a href="#" class="view-all">
+                See All Categories
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+
+        <div class="category-grid">
+
+            <div class="category-card">
+                <div class="category-icon purple-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <h3>Greeting Cards</h3>
+                <p>Beautiful cards for every occasion.</p>
+                <a href="#">Browse →</a>
+            </div>
+
+
+            <div class="category-card">
+                <div class="category-icon blue-icon">
+                    <i class="fa-solid fa-file-lines"></i>
+                </div>
+                <h3>Flyers</h3>
+                <p>Promote your business with quality flyers.</p>
+                <a href="#">Browse →</a>
+            </div>
+
+
+            <div class="category-card">
+                <div class="category-icon yellow-icon">
+                    <i class="fa-solid fa-tag"></i>
+                </div>
+                <h3>Stickers</h3>
+                <p>Make your brand stand out.</p>
+                <a href="#">Browse →</a>
+            </div>
+
+
+            <div class="category-card">
+                <div class="category-icon pink-icon">
+                    <i class="fa-solid fa-shirt"></i>
+                </div>
+                <h3>Apparel</h3>
+                <p>Custom branded clothing.</p>
+                <a href="#">Browse →</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="trust-section">
+
+    <div class="container">
+        <div class="trust-content">
+            <div class="trust-text">
+                <p class="section-tag">
+                    TRUSTED BY BUSINESSES
+                </p>
+                <h2> Nigeria's trusted <span>online print shop.</span> </h2>
+                <p>
+                    We help businesses, organizations and individuals
+                    bring their ideas to life with quality printing
+                    and reliable delivery.
+                </p>
+                <div class="stats">
+
+                    <div>
+                        <strong>15K+</strong>
+                        <span>Businesses served</span>
+                    </div>
+
+                    <div>
+                        <strong>100K+</strong>
+                        <span>Orders completed</span>
+                    </div>
+
+                    <div>
+                        <strong>4.9/5</strong>
+                        <span>Customer rating</span>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="brand-wall">
+
+                <div>TECH</div>
+                <div>STARTUP</div>
+                <div>CREATIVE</div>
+                <div>AFRICA</div>
+
+                <div>SHOP</div>
+                <div>MEDIA</div>
+                <div>STUDIO</div>
+                <div>DESIGN</div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="section testimonials">
+
+    <div class="container">
+        <div class="center-heading">
+            <p class="section-tag">
+                CUSTOMER LOVE
+            </p>
+            <h2>
+                What Customers Say About Us 🙌🏾
+            </h2>
+        </div>
+
+
+        <div class="testimonial-grid">
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    ★★★★★
+                </div>
+                <p>
+                    "The quality was amazing and my order arrived
+                    much faster than I expected. I'll definitely
+                    be ordering again."
+                </p>
+                <div class="customer">
+                    <div class="customer-avatar">AE</div>
+                    <div>
+                        <strong>Amina Ebele</strong>
+                        <span>Business Owner</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="testimonial-card">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+                <p>
+                    "Excellent service and beautiful prints.
+                    The entire process was simple from ordering
+                    to delivery."
+                </p>
+                <div class="customer">
+                    <div class="customer-avatar">TO</div>
+                    <div>
+                        <strong>Tosin</strong>
+                        <span>Entrepreneur</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="testimonial-card">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+                <p>
+                    "Affordable, professional and reliable.
+                    Their customer service is also excellent."
+                </p>
+                <div class="customer">
+                    <div class="customer-avatar">OB</div>
+                    <div>
+                        <strong>Oluwatosin</strong>
+                        <span>Creative Director</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="features-section">
+
+    <div class="container">
+        <div class="center-heading">
+            <p class="section-tag">
+                WHY PRINTLY?
+            </p>
+            <h2>
+                You can count on us.
+            </h2>
+        </div>
+
+
+        <div class="features-grid">
+
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h3>Fast Turnaround</h3>
+                <p>
+                    Get your orders delivered quickly without
+                    sacrificing print quality.
+                </p>
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-medal"></i>
+                </div>
+                <h3>Top Quality</h3>
+                <p>
+                    We use quality materials and modern
+                    printing technology for every order.
+                </p>
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-wallet"></i>
+                </div>
+                <h3>Affordable Services</h3>
+                <p>
+                    Get excellent value without breaking
+                    your business budget.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="cta">
+
+    <div class="container cta-inner">
+        <div>
+            <p>READY TO PRINT?</p>
+            <h2>
+                Bring your ideas to life.
+            </h2>
+            <span>
+                Start creating your next print project today.
+            </span>
+        </div>
+        <button onclick="scrollToProducts()">
+            Start Printing
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </div>
+
+</section>
+
+
+<section class="section press">
+
+    <div class="container">
+        <div class="center-heading">
+            <p class="section-tag">
+                FEATURED IN
+            </p>
+            <h2>
+                Our work got noticed by
+            </h2>
+        </div>
+
+        <div class="press-grid">
+            <div class="press-logo">
+                TechCrunch
+            </div>
+
+            <div class="press-logo">
+                FORBES
+            </div>
+
+            <div class="press-logo">
+                TECHPOINT
+            </div>
+
+            <div class="press-logo">
+                TechCabal
+            </div>
+
+            <div class="press-logo">
+                CNN
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<section class="newsletter">
+
+    <div class="container newsletter-inner">
+        <div>
+            <h2>
+                Get printing inspiration.
+            </h2>
+            <p>
+                Subscribe for printing tips, offers and new products.
+            </p>
+        </div>
+
+
+        <form id="newsletterForm">
+
+            <input type="email" id="email" placeholder="Enter your email address" required>
+            <button type="submit">
+                Subscribe
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<footer class="footer">
+
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo footer-logo">
+                    Print<span>ly</span>
+                </a>
+                <p>
+                    Quality printing made simple.
+                    Create, print and get your products
+                    delivered to your doorstep.
+                </p>
+                <div class="socials">
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="footer-column">
+                <h3>Printly</h3>
+
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Track Order</a>
+                <a href="#">Our Promise</a>
+                <a href="#">Blog</a>
+                <a href="#">Careers</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Help & Information</h3>
+
+                <a href="#">Paper Quality</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Shipping & Delivery</a>
+                <a href="#">FAQs</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Make Money</h3>
+
+                <a href="#">Refer a Friend</a>
+                <a href="#">Become a Reseller</a>
+                <a href="#">Sell Your Designs</a>
+                <a href="#">Merch Store</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Printly. All rights reserved.
+            </span>
+
+            <div class="payment-methods">
+
+                <span>VISA</span>
+                <span>Mastercard</span>
+                <span>Paystack</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<div class="modal" id="loginModal">
+
+    <div class="modal-box">
+        <button class="close-modal" onclick="closeModal('loginModal')">
+            ×
+        </button>
+
+        <div class="modal-icon">
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <h2>Welcome Back</h2>
+        <p>Sign in to your Printly account.</p>
+        <form onsubmit="login(event)">
+
+            <label>Email Address</label>
+            <input
+                type="email" placeholder="you@example.com" required>
+            <label>Password</label>
+
+            <input
+                type="password" placeholder="Your password" required>
+            <button type="submit" class="modal-submit">
+                Sign In
+            </button>
+
+        </form>
+
+        <span class="modal-switch">
+            Don't have an account?
+            <button onclick="switchModal('loginModal','signupModal')">
+                Create one
+            </button>
+        </span>
+
+    </div>
+
+</div>
+
+
+<div class="modal" id="signupModal">
+
+    <div class="modal-box">
+        <button class="close-modal" onclick="closeModal('signupModal')">
+            ×
+        </button>
+
+        <div class="modal-icon">
+            <i class="fa-solid fa-user-plus"></i>
+        </div>
+
+        <h2>Create Account</h2>
+        <p>Join thousands of customers printing with us.</p>
+        <form onsubmit="signup(event)">
+
+            <label>Full Name</label>
+
+            <input type="text" placeholder="Your name" required>
+            <label>Email Address</label>
+
+            <input type="email"placeholder="you@example.com"required>
+            <label>Password</label>
+
+            <input type="password"placeholder="Create a password"required>
+
+            <button type="submit" class="modal-submit">
+                Create Account
+            </button>
+
+        </form>
+
+        <span class="modal-switch">
+            Already have an account?
+            <button onclick="switchModal('signupModal','loginModal')">
+                Sign in
+            </button>
+        </span>
+
+    </div>
+</div>
+
+
+<div class="toast" id="toast"></div>
+
+
+<script src="Printivo.js"></script>
+
+</body>
+</html>
